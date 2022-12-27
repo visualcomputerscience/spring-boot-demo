@@ -19,4 +19,9 @@ public class Controller {
     public String helloWorldWithPostMethod(@RequestBody Object body) {
         return "Hello back with parameter " + body;
     }
+    
+    @PostMapping("/hello/")
+    public String helloWorldNoMessage() {
+        return "";
+    }
 }

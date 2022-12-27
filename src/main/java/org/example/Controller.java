@@ -1,8 +1,6 @@
 package org.example;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class Controller {
@@ -14,6 +12,11 @@ public class Controller {
 
     @GetMapping("/hello/{param}")
     public String helloWorldWithParam(@PathVariable Integer param) {
+        return "Hello back with param: " + param;
+    }
+
+    @PostMapping("/hello")
+    public String helloWorldWithBody(@RequestBody Object param) {
         return "Hello back with param: " + param;
     }
 }

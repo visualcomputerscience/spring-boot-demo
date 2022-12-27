@@ -17,6 +17,6 @@ public class Controller {
 
     @PostMapping("/hello/")
     public String helloWorldWithPostMethod(@RequestBody Object body) {
-        return "Hello back with param " + body;
+        return "Hello back with parameter " + body;
     }
 }

@@ -14,6 +14,6 @@ public class Controller {
 
     @GetMapping("/hello/{param}")
     public String helloWorldWithParam(@PathVariable Integer param) {
-        return "Hello back with para: " + param;
+        return "Hello back with param: " + param;
     }
 }
